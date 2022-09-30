@@ -174,8 +174,8 @@ export function newSeed(mode: GameMode) {
 			return Date.UTC(1970, 0, 1 + Math.floor((now - (new Date().getTimezoneOffset() * ms.MINUTE)) / ms.DAY));
 		case GameMode.hourly:
 			return now - (now % ms.HOUR);
-		// case GameMode.minutely:
-		// 	return now - (now % ms.MINUTE);
+		 case GameMode.minutely:
+			return now - (now % ms.MINUTE);
 		case GameMode.infinite:
 			return now - (now % ms.SECOND);
 	}
@@ -210,15 +210,15 @@ export const modeData: ModeData = {
 			historical: false,
 			icon: "m7,100c0,-50 68,-50 93,0c25,50 93,50 93,0c0,-50 -68,-50 -93,0c-25,50 -93,50 -93,0z",
 		},
-		// {
-		// 	name: "Minutely",
-		// 	unit: ms.MINUTE,
-		// 	start: 1642528800000,	// 18/01/2022 8:00pm
-		// 	seed: newSeed(GameMode.minutely),
-		// 	historical: false,
-		// 	icon: "m7,200v-200l93,100l93,-100v200",
-		// 	streak: true,
-		// },
+		 {
+		 	name: "Minutely",
+		 	unit: ms.MINUTE,
+		 	start: 1642528800000,	// 18/01/2022 8:00pm
+		 	seed: newSeed(GameMode.minutely),
+		 	historical: false,
+		 	icon: "m7,200v-200l93,100l93,-100v200",
+		 	streak: true,
+		 },
 	]
 };
 
