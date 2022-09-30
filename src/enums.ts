@@ -3,6 +3,7 @@ export enum GameMode {
 	"hourly",
 	"infinite",
 	"minutely",
+	"joke",
 };
 
 export const enum ms {
@@ -10,4 +11,5 @@ export const enum ms {
 	MINUTE = 1000 * 60,
 	HOUR = 1000 * 60 * 60,
 	DAY = 1000 * 60 * 60 * 24,
+	JOKE = 0 * 0
 };
